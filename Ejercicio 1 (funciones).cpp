@@ -17,25 +17,24 @@ int main(){
 	cout<<"---------------------------------------"<<endl<<endl;
 
 	cout<<"Nota de conocimiento(0-20): "<<endl;
-	
 	cin>>ec;
-	if (ec < 0 or ec > 20) {
+	while (ec < 0 or ec > 20) {
             cout << "Esta nota es invalida, recuerda que debe de estar dentro del rango de 0 y 20." << endl;
             cin>>ec;
         }
 	cout<<"Nota de desempeño: "<<endl;
 	cin>>ed;	
-		if (ed < 0 or ed > 20) {
+		while (ed < 0 or ed > 20) {
             cout << "Esta nota es invalida, recuerda que debe de estar dentro del rango de 0 y 20." << endl;
-            cin>>ec;
+            cin>>ed;
         }
 	cout<<"Nota de producto: "<<endl;
 	cin>>ep;
-		if (ep < 0 or ep > 20) {
+		while (ep < 0 or ep > 20) {
             cout << "Esta nota es invalida, recuerda que debe de estar dentro del rango de 0 y 20." << endl;
-            cin>>ec;
+            cin>>ep;
         }
 	S=suma(ec, ed, ep);
-	cout<<"Tu calificacion final en la Primera Unidad es: "<<endl<<S;
+	cout<<"Tu calificacion final es: "<<endl<<S;
 	return 0;
 }
