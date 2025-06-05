@@ -10,14 +10,31 @@ double suma(int a, int b, int c){
 int main(){
 	int ec, ed, ep;
 	double S;
-	cout<<"Ingrese sus notas porfavor"<<endl;
-	cout<<"Nota de conocimiento: ";
+	cout << "-------------------------------------------------------"<< endl;
+	cout << "    Calificacion Final - Fundamentos y Programacion    "<< endl;
+	cout << "-------------------------------------------------------"<< endl<<endl;
+	cout<<"Ingresa tus notas de la Primera Unidad:"<<endl;
+	cout<<"---------------------------------------"<<endl<<endl;
+
+	cout<<"Nota de conocimiento(0-20): "<<endl;
 	cin>>ec;
-	cout<<"Nota de desempeño: ";
-	cin>>ed;
-	cout<<"Nota de producto: ";
+	while (ec < 0 or ec > 20) {
+            cout << "Esta nota es invalida, recuerda que debe de estar dentro del rango de 0 y 20." << endl;
+            cin>>ec;
+        }
+	cout<<"Nota de desempeño: "<<endl;
+	cin>>ed;	
+		while (ed < 0 or ed > 20) {
+            cout << "Esta nota es invalida, recuerda que debe de estar dentro del rango de 0 y 20." << endl;
+            cin>>ed;
+        }
+	cout<<"Nota de producto: "<<endl;
 	cin>>ep;
+		while (ep < 0 or ep > 20) {
+            cout << "Esta nota es invalida, recuerda que debe de estar dentro del rango de 0 y 20." << endl;
+            cin>>ep;
+        }
 	S=suma(ec, ed, ep);
-	cout<<"Su calificacion final es: "<<S<<endl;
+	cout<<"Tu calificacion final es: "<<endl<<S;
 	return 0;
 }
